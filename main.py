@@ -68,4 +68,4 @@ if __name__ == '__main__':
     linked_list.prepend_node(45)
     print(linked_list.head.data)
     print(linked_list.head.prior.data)
-    print(linked_list)
+    print(linked_list.list)

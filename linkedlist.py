@@ -30,6 +30,7 @@ class LinkedList:
             temporary_node = temporary_node.prior
 
         temporary_node.prior = node  # assigns new node data as self.head
+        self.list.insert(0, temporary_node.prior.data)
         return
 
 
