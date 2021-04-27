@@ -43,3 +43,16 @@ if __name__ == '__main__':
     print(f"\n{sweepstakes.contestants}")
     sweepstakes.select_winner()
 
+    # use list to store immediate family
+    immediate_family = [{"first name": "charles",
+                         "last name": "nesmith",
+                         "relation": "father"},
+                        {"first name": "gloria",
+                         "last name": "nesmith",
+                         "relation": "mother"},
+                        {"first name": "kamilah",
+                         "last name": "nesmith",
+                         "relation": "sister"},
+                        {"first name": "maurice",
+                         "last name": "thomas",
+                         "relation": "nephew"}]
