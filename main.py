@@ -1,4 +1,5 @@
 import random
+from linkedlist import LinkedList
 
 if __name__ == '__main__':
     # store months of the year.
@@ -30,7 +31,7 @@ if __name__ == '__main__':
             self.key += 1
 
         def select_winner(self):
-            rand = random.randrange(6)
+            rand = random.randrange(1, 6)
             winner = self.contestants[rand]
             print(f"\nAnd the winner is... {winner}!")
 
@@ -56,3 +57,10 @@ if __name__ == '__main__':
                         {"first name": "maurice",
                          "last name": "thomas",
                          "relation": "nephew"}]
+    print(f"\n{immediate_family}")
+
+    linked_list = LinkedList()
+
+    linked_list.append_node(55)
+    linked_list.append_node(60)
+    linked_list.append_node(65)
