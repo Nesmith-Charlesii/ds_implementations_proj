@@ -57,10 +57,15 @@ if __name__ == '__main__':
                         {"first name": "maurice",
                          "last name": "thomas",
                          "relation": "nephew"}]
-    print(f"\n{immediate_family}")
+    # print(f"\n{immediate_family}")
 
     linked_list = LinkedList()
 
     linked_list.append_node(55)
     linked_list.append_node(60)
     linked_list.append_node(65)
+    linked_list.prepend_node(50)
+    linked_list.prepend_node(45)
+    print(linked_list.head.data)
+    print(linked_list.head.prior.data)
+    print(linked_list)
