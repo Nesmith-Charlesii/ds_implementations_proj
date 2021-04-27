@@ -1,6 +1,5 @@
 from node import Node
 
-
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -33,4 +32,6 @@ class LinkedList:
         self.list.insert(0, temporary_node.prior.data)
         return
 
-
+    def contains_node(self, data):
+        if data in self.list:
+            print(f"\nThe value of {data} is at index {self.list.index(data)} of this object")
