@@ -34,5 +34,12 @@ if __name__ == '__main__':
             winner = self.contestants[rand]
             print(f"\nAnd the winner is... {winner}!")
 
-
+    sweepstakes = Sweepstakes()
+    sweepstakes.add_contestant('bruce', 'lee')
+    sweepstakes.add_contestant('jackie', 'chan')
+    sweepstakes.add_contestant('jet', 'li')
+    sweepstakes.add_contestant('michael jai', 'white')
+    sweepstakes.add_contestant('chuck', 'norris')
+    print(f"\n{sweepstakes.contestants}")
+    sweepstakes.select_winner()
 
