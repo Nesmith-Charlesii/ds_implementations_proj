@@ -1,5 +1,8 @@
 import random
 from linkedlist import LinkedList
+from sort_q import sort as sort_q
+from sort_m import sort as sort_m
+from sort_i import sort as sort_i
 
 if __name__ == '__main__':
     # store months of the year.
@@ -11,7 +14,7 @@ if __name__ == '__main__':
     print(f"The month of pi is in {pi_day}\n")
 
     # store locations where you have celebrated your birthday
-    # uses a set to add and iterate over values
+    # uses a set to add and iterate over values, but will not change previous entries
     bday_locations = {'virginia, us', 'north carolina, us', 'california, us', 'drc, africa', 'germany, europe'}
     bday_locations.add('ghana, africa')
     bday_locations.add('nevada, us')
@@ -31,7 +34,9 @@ if __name__ == '__main__':
             self.key += 1
 
         def select_winner(self):
+            # rand select random number between 1 and 6 (6 excluded)
             rand = random.randrange(1, 6)
+            # winner is selected at a random key between 1 and 5
             winner = self.contestants[rand]
             print(f"\nAnd the winner is... {winner}!")
 
@@ -44,7 +49,7 @@ if __name__ == '__main__':
     print(f"\n{sweepstakes.contestants}")
     sweepstakes.select_winner()
 
-    # use list to store immediate family
+    # use list of dictionaries to store immediate family
     immediate_family = [{"first name": "charles",
                          "last name": "nesmith",
                          "relation": "father"},
@@ -73,3 +78,13 @@ if __name__ == '__main__':
     print("******\n")
     print(linked_list.list)
     linked_list.contains_node(55)
+
+    some_list = [3, 8, 7, 5, 2, 1, 9, 6, 4]
+
+    sorted_list_from_m = sort_m(some_list)
+    sorted_list_from_q = sort_q(some_list)
+    sorted_list_from_i = sort_i(some_list)
+
+    print(f'Sort M Result: {sorted_list_from_m}')
+    print(f'Sort Q Result: {sorted_list_from_q}')
+    print(f'Sort I Result: {sorted_list_from_i}')

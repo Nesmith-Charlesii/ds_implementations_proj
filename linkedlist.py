@@ -1,5 +1,6 @@
 from node import Node
 
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -22,14 +23,14 @@ class LinkedList:
         self.list.append(temporary_node.next.data)
 
     def prepend_node(self, data):
-        node = Node(data)  # takes new data. assigns to variable 'node'
-        temporary_node = self.head  # holds head of list as 'temporary_node'
+        node = Node(data)  # takes data argument. assigns data to variable 'node'
+        temporary_node = self.head  # temporary_node holds self.head of list as 'temporary_node' (as to not overwrite the self.head)
 
         while temporary_node.prior is not None:
             temporary_node = temporary_node.prior
 
         temporary_node.prior = node  # assigns new node data as self.head
-        self.list.insert(0, temporary_node.prior.data)
+        self.list.insert(0, temporary_node.prior.data)  # inserts new node at the beginning of the list
         return
 
     def contains_node(self, data):
